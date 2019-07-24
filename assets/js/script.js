@@ -14,8 +14,10 @@ let L8 = document.querySelector("#L8");
 let L9 = document.querySelector("#L9");
 let Y0 = document.querySelector("#Y0");
 let Y1 = document.querySelector("#Y1");
-let yoga = false;
+let yoga = true;
 let index = 0;
+//60,000 milliseconds is one Minute
+let timeMill = 60000;
 let LEDarray = [];
 LEDarray.push(L0);
 LEDarray.push(L1);
@@ -30,7 +32,7 @@ LEDarray.push(L9);
 
 startBtn.addEventListener("click", () => {
   if (runTask === true) {
-    timer = setInterval(blink, 700);
+    timer = setInterval(blink, timeMill);
   }
 });
 
@@ -46,6 +48,15 @@ function blink() {
     for (let u = 0; u < 10; u++) {
       LEDarray[u].style.backgroundColor = "#0f0";
     }
+
+    if (yoga === true) {
+      Y0.style.backgroundColor = "#0f0";
+      Y1.style.backgroundColor = "white";
+    } else {
+      Y0.style.backgroundColor = "white";
+      Y1.style.backgroundColor = "blue";
+    }
+
     yoga = !yoga;
     main();
   } else {
@@ -56,14 +67,9 @@ function blink() {
 
 function main() {
   console.log("Change LED COLOR");
+
   console.log(LEDarray[index]);
-  if (yoga === true) {
-    Y0.style.backgroundColor = "green";
-    Y1.style.backgroundColor = "white";
-  } else {
-    Y0.style.backgroundColor = "white";
-    Y1.style.backgroundColor = "blue";
-  }
+
   LEDarray[index].style.backgroundColor = "red";
   index++;
 }
