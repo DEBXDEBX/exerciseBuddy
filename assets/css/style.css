@@ -64,3 +64,17 @@ div.led {
   background-color: #0f0;
   margin: 10px;
 }
+div.yLed {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid red 15px;
+  border-color: white;
+  background-color: white;
+  margin: 10px;
+}
+#yogaContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
