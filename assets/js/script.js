@@ -42,15 +42,14 @@ startBtn.addEventListener("click", () => {
 stopBtn.addEventListener("click", () => {
   startBtn.style.display = "block";
   stopBtn.style.display = "none";
-  console.log("stop clicked");
   clearInterval(timer);
 });
 
 function blink() {
   if (index === 10) {
     warningAudio.play();
-    console.log("Reset");
     index = 0;
+
     for (let u = 0; u < 10; u++) {
       LEDarray[u].style.backgroundColor = "#0f0";
     }
@@ -64,18 +63,14 @@ function blink() {
     }
 
     yoga = !yoga;
+
     main();
   } else {
-    console.log("David is great");
     main();
   }
 }
 
 function main() {
-  console.log("Change LED COLOR");
-
-  console.log(LEDarray[index]);
-
   LEDarray[index].style.backgroundColor = "red";
   index++;
 }
