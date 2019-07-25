@@ -1,5 +1,6 @@
 let timer;
 let runTask = true;
+let warningAudio = document.querySelector("#warningAudio");
 let startBtn = document.querySelector("#startBtn");
 let stopBtn = document.querySelector("#stopBtn");
 let L0 = document.querySelector("#L0");
@@ -43,6 +44,7 @@ stopBtn.addEventListener("click", () => {
 
 function blink() {
   if (index === 10) {
+    warningAudio.play();
     console.log("Reset");
     index = 0;
     for (let u = 0; u < 10; u++) {
