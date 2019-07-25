@@ -43,6 +43,7 @@ h1 {
 #stopBtn {
   color: red;
   background-color: #0f0;
+  display: none;
 }
 #btnContainer {
   display: flex;
