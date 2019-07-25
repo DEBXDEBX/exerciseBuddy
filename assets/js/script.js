@@ -18,7 +18,7 @@ let Y1 = document.querySelector("#Y1");
 let yoga = true;
 let index = 0;
 //60,000 milliseconds is one Minute
-let timeMill = 600;
+let timeMill = 60000;
 let LEDarray = [];
 LEDarray.push(L0);
 LEDarray.push(L1);
