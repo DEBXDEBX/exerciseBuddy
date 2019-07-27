@@ -62,12 +62,12 @@ div.led {
   border-radius: 50%;
   border: solid white 15px;
   background-color: #0f0;
-  margin: 10px;
 }
 div.yLed {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  border: solid white 15px;
   background-color: white;
   margin: 10px;
 }

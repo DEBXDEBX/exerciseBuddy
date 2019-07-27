@@ -18,7 +18,7 @@ let Y1 = document.querySelector("#Y1");
 let yoga = true;
 let index = 0;
 //60,000 milliseconds is one Minute
-let timeMill = 60000;
+let timeMill = 600000;
 let LEDarray = [];
 LEDarray.push(L0);
 LEDarray.push(L1);
@@ -35,7 +35,7 @@ startBtn.addEventListener("click", () => {
   startBtn.style.display = "none";
   stopBtn.style.display = "block";
   if (runTask === true) {
-    timer = setInterval(blink, timeMill);
+    timer = setInterval(cycle, timeMill);
   }
 });
 
@@ -45,7 +45,7 @@ stopBtn.addEventListener("click", () => {
   clearInterval(timer);
 });
 
-function blink() {
+function cycle() {
   if (index === 10) {
     warningAudio.play();
     index = 0;
