@@ -76,3 +76,18 @@ div.yLed {
   flex-wrap: wrap;
   justify-content: center;
 }
+#sliderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+#sliderInput {
+  width: 80%;
+  margin: 0 auto;
+}
+#label {
+  color: white;
+}

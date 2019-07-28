@@ -16,9 +16,11 @@ let L9 = document.querySelector("#L9");
 let Y0 = document.querySelector("#Y0");
 let Y1 = document.querySelector("#Y1");
 let yoga = true;
+let slider = document.querySelector("#sliderInput");
+let label = document.querySelector("#label");
 let index = 0;
 //60,000 milliseconds is one Minute
-let timeMill = 600000;
+let timeMill = 60000;
 let LEDarray = [];
 LEDarray.push(L0);
 LEDarray.push(L1);
@@ -32,6 +34,7 @@ LEDarray.push(L8);
 LEDarray.push(L9);
 
 startBtn.addEventListener("click", () => {
+  slider.style.display = "none";
   startBtn.style.display = "none";
   stopBtn.style.display = "block";
   if (runTask === true) {
@@ -40,6 +43,7 @@ startBtn.addEventListener("click", () => {
 });
 
 stopBtn.addEventListener("click", () => {
+  slider.style.display = "block";
   startBtn.style.display = "block";
   stopBtn.style.display = "none";
   clearInterval(timer);
@@ -74,3 +78,46 @@ function main() {
   LEDarray[index].style.backgroundColor = "red";
   index++;
 }
+
+// slider
+slider.addEventListener("change", () => {
+  clearInterval(timer);
+  console.log(slider.value);
+  let labelValue;
+  switch (Number(slider.value)) {
+    case 1:
+      timeMill = 60000;
+      labelValue = "Cycle Every Sixty Seconds";
+      break;
+    case 2:
+      timeMill = 50000;
+      labelValue = "Cycle Every Fifthty Seconds";
+      break;
+    case 3:
+      timeMill = 40000;
+      labelValue = "Cycle Every Forty Seconds";
+      break;
+    case 4:
+      timeMill = 30000;
+      labelValue = "Cycle Every Thirty Seconds";
+      break;
+    case 5:
+      timeMill = 20000;
+      labelValue = "Cycle Every Twenty Seconds";
+      break;
+    case 6:
+      timeMill = 10000;
+      labelValue = "Cycle Every Ten Seconds";
+      break;
+    case 7:
+      timeMill = 1000;
+      labelValue = "Cycle Every Second";
+      break;
+    default:
+      console.log("Invalid Entry");
+      labelValue = "Invalid Entry";
+  }
+  label.textContent = labelValue;
+  console.log("slider Moved");
+  console.log(timeMill);
+});
