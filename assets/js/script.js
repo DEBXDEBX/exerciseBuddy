@@ -82,7 +82,6 @@ function main() {
 // slider
 slider.addEventListener("change", () => {
   clearInterval(timer);
-  console.log(slider.value);
   let labelValue;
   switch (Number(slider.value)) {
     case 1:
@@ -118,6 +117,5 @@ slider.addEventListener("change", () => {
       labelValue = "Invalid Entry";
   }
   label.textContent = labelValue;
-  console.log("slider Moved");
-  console.log(timeMill);
+
 });
