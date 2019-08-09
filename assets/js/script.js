@@ -120,13 +120,21 @@ slider.addEventListener("change", () => {
 });
 
 Y0.addEventListener("click", () => {
-  Y0.style.backgroundColor = "#0f0";
-  Y1.style.backgroundColor = "white";
-  yoga = !yoga;
+  if (Y0.style.backgroundColor === "#0f0") {
+    return;
+  } else {
+    Y0.style.backgroundColor = "#0f0";
+    Y1.style.backgroundColor = "white";
+    yoga = false;
+  }
 });
 
 Y1.addEventListener("click", () => {
-  Y0.style.backgroundColor = "white";
-  Y1.style.backgroundColor = "blue";
-  yoga = !yoga;
+  if (Y1.style.backgroundColor === "blue") {
+    return;
+  } else {
+    Y0.style.backgroundColor = "white";
+    Y1.style.backgroundColor = "blue";
+    yoga = true;
+  }
 });
