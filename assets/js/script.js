@@ -120,7 +120,7 @@ slider.addEventListener("change", () => {
 });
 
 Y0.addEventListener("click", () => {
-  if (Y0.style.backgroundColor === "#0f0") {
+  if (Y0.style.backgroundColor === "rgb(0, 255, 0)") {
     return;
   } else {
     Y0.style.backgroundColor = "#0f0";
