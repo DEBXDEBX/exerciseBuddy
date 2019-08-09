@@ -117,5 +117,16 @@ slider.addEventListener("change", () => {
       labelValue = "Invalid Entry";
   }
   label.textContent = labelValue;
+});
 
+Y0.addEventListener("click", () => {
+  Y0.style.backgroundColor = "#0f0";
+  Y1.style.backgroundColor = "white";
+  yoga = !yoga;
+});
+
+Y1.addEventListener("click", () => {
+  Y0.style.backgroundColor = "white";
+  Y1.style.backgroundColor = "blue";
+  yoga = !yoga;
 });
