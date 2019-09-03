@@ -1,6 +1,10 @@
 let timer;
 let runTask = true;
+let sliderAudio = document.querySelector("#sliderAudio");
+let startAudio = document.querySelector("#startAudio");
+let stopAudio = document.querySelector("#stopAudio");
 let warningAudio = document.querySelector("#warningAudio");
+let yogaLedAudio = document.querySelector("#yogaLedAudio");
 let startBtn = document.querySelector("#startBtn");
 let stopBtn = document.querySelector("#stopBtn");
 let L0 = document.querySelector("#L0");
@@ -34,6 +38,7 @@ LEDarray.push(L8);
 LEDarray.push(L9);
 
 startBtn.addEventListener("click", () => {
+  startAudio.play();
   slider.style.display = "none";
   startBtn.style.display = "none";
   stopBtn.style.display = "block";
@@ -43,6 +48,7 @@ startBtn.addEventListener("click", () => {
 });
 
 stopBtn.addEventListener("click", () => {
+  stopAudio.play();
   slider.style.display = "block";
   startBtn.style.display = "block";
   stopBtn.style.display = "none";
@@ -81,6 +87,7 @@ function main() {
 
 // slider
 slider.addEventListener("change", () => {
+  sliderAudio.play();
   clearInterval(timer);
   let labelValue;
   switch (Number(slider.value)) {
@@ -123,6 +130,7 @@ Y0.addEventListener("click", () => {
   if (Y0.style.backgroundColor === "rgb(0, 255, 0)") {
     return;
   } else {
+    yogaLedAudio.play();
     Y0.style.backgroundColor = "#0f0";
     Y1.style.backgroundColor = "white";
     yoga = false;
@@ -133,6 +141,7 @@ Y1.addEventListener("click", () => {
   if (Y1.style.backgroundColor === "blue") {
     return;
   } else {
+    yogaLedAudio.play();
     Y0.style.backgroundColor = "white";
     Y1.style.backgroundColor = "blue";
     yoga = true;
