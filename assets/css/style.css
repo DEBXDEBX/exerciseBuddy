@@ -41,10 +41,16 @@ h1 {
   color: black;
   background-color: #0f0;
 }
+#startBtn:hover {
+  cursor: pointer;
+}
 #stopBtn {
   color: white;
   background-color: red;
   display: none;
+}
+#stopBtn:hover {
+  cursor: pointer;
 }
 #btnContainer {
   display: flex;
@@ -91,6 +97,9 @@ div.yLed {
 }
 #label {
   color: white;
+}
+.yLed:hover {
+  cursor: pointer;
 }
 
 /* The code below is for the slider */
