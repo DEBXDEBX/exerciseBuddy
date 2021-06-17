@@ -7,6 +7,7 @@ let warningAudio = document.querySelector("#warningAudio");
 let yogaLedAudio = document.querySelector("#yogaLedAudio");
 let startBtn = document.querySelector("#startBtn");
 let stopBtn = document.querySelector("#stopBtn");
+const tabAudio = document.querySelector("#tabAudio");
 let L0 = document.querySelector("#L0");
 let L1 = document.querySelector("#L1");
 let L2 = document.querySelector("#L2");
@@ -56,6 +57,7 @@ stopBtn.addEventListener("click", () => {
 });
 
 function cycle() {
+  tabAudio.play();
   if (index === 10) {
     warningAudio.play();
     index = 0;
