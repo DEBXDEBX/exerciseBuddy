@@ -28,11 +28,16 @@ h1 {
   margin: 30px 0px 20px 0px;
 }
 
+#eb {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 #startBtn,
 #stopBtn {
   font-size: 1.8rem;
   font-weight: 900;
-  margin: 10px;
+  margin: 30px;
   padding: 0.3rem;
   border-radius: 20%;
   border: 10px solid white;
@@ -193,8 +198,8 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 @media screen and (max-width: 1000px) {
   #eb {
-    font-size: 0.9rem;
-    margin: 15px 0px 15px 0px;
+    font-size: 0.7rem;
+    margin: 15px 0px 15px 7px;
   }
   #label {
     font-size: 0.9rem;
